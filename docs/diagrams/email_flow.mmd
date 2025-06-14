@@ -1,0 +1,8 @@
+graph LR
+    A[E-Mail] --> B{SES}
+    B -->|Trigger| C[Lambda]
+    C --> D{Subject enthält Befehl?}
+    D -->|Ja| E[Verarbeite Befehl]
+    D -->|Nein| F[Sende HELP-Anleitung]
+    E --> G[Sende Antwort]
+    F --> G

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# AWS
+*.aws_credentials
+
+# IDE
+.vscode/
+.idea/
+
+# Dokumentation
+*.pdf
+*.docx
+
+# Sonstiges
+*.log
+*.tmp
