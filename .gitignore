@@ -11,6 +11,9 @@ venv/
 .terraform/
 *.tfstate
 *.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+terraform.plan
 
 # AWS
 *.aws_credentials
