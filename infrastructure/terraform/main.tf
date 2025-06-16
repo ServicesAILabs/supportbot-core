@@ -32,5 +32,6 @@ module "email_handler_lambda" {
   runtime       = "python3.11"
   s3_bucket     = aws_s3_bucket.lambda_code.bucket
   s3_key        = "v1.0.0/lambda_package.zip"
+  source_code_hash = filebase64sha256(var.source_path)
   environment   = var.environment
 }
