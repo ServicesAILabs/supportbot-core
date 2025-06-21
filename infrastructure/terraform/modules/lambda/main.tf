@@ -5,11 +5,15 @@ resource "aws_lambda_function" "function" {
   runtime       = var.runtime
   s3_bucket     = var.s3_bucket
   s3_key        = var.s3_key
+  source_code_hash = var.source_code_hash
   timeout       = 30 # Sekunden
 
-  environment {
-    variables = {
-      ENVIRONMENT = var.environment
+  dynamic "environment" {
+    for_each = var.environment != null ? [1] : []
+    content {
+      variables = {
+        ENVIRONMENT = var.environment
+      }
     }
   }
 }
